@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>EMBER — Taste the Story</title>
+<meta name="description" content="EMBER is a chef-led restaurant where everything is cooked over wood fire. Follow the seven-course Fire Menu from ingredient to flame to plate, explore the menu and send a reservation request.">
+<meta name="theme-color" content="#120D0A">
+<link rel="canonical" href="https://ember-pearl-eta.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="EMBER">
+<meta property="og:title" content="EMBER — Taste the Story">
+<meta property="og:description" content="Seven courses cooked over wood fire. Follow each one from ingredient to flame to plate.">
+<meta property="og:url" content="https://ember-pearl-eta.vercel.app/">
+<meta property="og:image" content="https://ember-pearl-eta.vercel.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="EMBER — Taste the Story">
+<meta name="twitter:description" content="A wood-fire tasting menu, from ingredient to flame to plate.">
+<meta name="twitter:image" content="https://ember-pearl-eta.vercel.app/og.png">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&amp;display=swap">
+<link rel="stylesheet" href="style.css">
+<script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.emberReady)document.documentElement.classList.remove('js');},3500);</script>
+<script type="module" src="main.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg class="defs" id="art-defs" aria-hidden="true" focusable="false" width="0" height="0">
+  <defs>
+    <symbol id="mark" viewBox="0 0 140 40">
+      <g transform="translate(20 20)">
+        <circle r="16" fill="none" stroke="#B08D57" stroke-width="1.3"/>
+        <circle r="12.5" fill="none" stroke="#B08D57" stroke-width=".6" opacity=".6"/>
+        <path d="M0 -10C5 -4 8 1 8 5A8 8 0 0 1 -8 5C-8 0 -4 -3 -2 -8C-1 -4 1 -3 2 -2C2 -5 1 -8 0 -10Z" fill="#D9572B"/>
+        <path d="M0 0C2 2 3 4 3 6A3 3 0 0 1 -3 6C-3 4 -1 2 0 0Z" fill="#F3E9DC" opacity=".85"/>
+      </g>
+      <g fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square" transform="translate(50 11)">
+        <path d="M1 0V18M1 0H11M1 9H8M1 18H11M11 0V3M11 18V15"/>
+        <path d="M17 18V0L24 13L31 0V18"/>
+        <path d="M37 0V18M37 0H43A4.4 4.4 0 0 1 43 8.8H37M43 8.8H44A4.6 4.6 0 0 1 44 18H37"/>
+        <path d="M54 0V18M54 0H64M54 9H61M54 18H64M64 0V3M64 18V15"/>
+        <path d="M70 18V0H76A4.4 4.4 0 0 1 76 8.8H70M74 8.8L81 18"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="hdr">
+  <a class="hdr__brand" href="#tasting" aria-label="EMBER, back to the tasting">
+    <svg viewBox="0 0 140 40" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+  </a>
+  <nav class="hdr__nav" id="nav" aria-label="Primary">
+    <ul>
+      <li><a href="#tasting">The tasting</a></li>
+      <li><a href="#fire">The fire</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#pantry">Pantry</a></li>
+      <li><a href="#room">The room</a></li>
+      <li><a class="hdr__cta" href="#reserve">Reserve</a></li>
+    </ul>
+  </nav>
+  <button class="hdr__menu" type="button" aria-expanded="false" aria-controls="nav"><span class="hdr__flame" aria-hidden="true"></span><span class="hdr__menu-label">Menu</span></button>
+</header>
+
+<main id="main" tabindex="-1">
+
+  <!-- The tasting: ingredient → fire → plate -->
+  <section id="tasting" class="tasting" aria-labelledby="hero-title">
+    <div class="tasting__glow" aria-hidden="true"></div>
+    <div class="tasting__intro">
+      <p class="eyebrow">The Fire Menu <span class="eyebrow__dot" aria-hidden="true"></span> Seven courses</p>
+      <h1 id="hero-title">Taste the <em>story.</em></h1>
+      <p class="tasting__lede">Everything at EMBER is cooked over wood. Follow each course from the raw ingredient, into the fire, and onto the plate.</p>
+    </div>
+
+    <div class="tasting__stage-wrap">
+      <div class="stage" id="stage" data-step="raw" tabindex="0" role="region" aria-roledescription="tasting stage" aria-label="Course illustration" aria-describedby="stage-help">
+        <svg class="stage__svg" id="stage-svg" viewBox="0 0 800 600" aria-hidden="true" focusable="false">
+          <g id="scenery"></g>
+          <g id="courses"></g>
+        </svg>
+      </div>
+      <p class="visually-hidden" id="stage-help">Use the left and right arrow keys, or swipe, to move between ingredient, fire and plate, and on to the next course.</p>
+    </div>
+
+    <div class="tasting__text">
+      <div class="steps" role="group" aria-label="Stage of the course">
+        <button type="button" class="step-btn" data-step="raw" aria-pressed="true"><span class="step-btn__n">1</span>Ingredient</button>
+        <button type="button" class="step-btn" data-step="fire" aria-pressed="false"><span class="step-btn__n">2</span>Fire</button>
+        <button type="button" class="step-btn" data-step="plate" aria-pressed="false"><span class="step-btn__n">3</span>Plate</button>
+      </div>
+      <div class="course-copy" id="course-copy" aria-live="polite">
+        <p class="course-copy__k"><span id="c-no">I</span><span class="course-copy__of">of VII</span></p>
+        <h2 class="course-copy__name" id="c-name">Ash &amp; Cream</h2>
+        <p class="course-copy__dish" id="c-dish">Leek baked in the embers, smoked cream, hazelnut</p>
+        <p class="course-copy__step-k" id="c-step-k">The ingredients</p>
+        <p class="course-copy__step" id="c-step">A whole winter leek, cream smoked over beech, and hazelnuts toasted in the pan.</p>
+      </div>
+      <div class="course-nav">
+        <button type="button" class="arrow-btn" id="prev" aria-label="Previous"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        <button type="button" class="next-btn" id="next"><span id="next-label">Into the fire</span><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      </div>
+    </div>
+
+    <nav class="rail" aria-label="Courses">
+      <span class="rail__line" aria-hidden="true"><span class="rail__fill" id="rail-fill"></span></span>
+      <ol class="rail__list" id="rail"></ol>
+    </nav>
+  </section>
+
+  <!-- The fire: a day at the hearth -->
+  <section id="fire" class="fire" aria-labelledby="fire-title">
+    <div class="fire__sticky">
+      <svg class="hearth" id="hearth" viewBox="0 0 400 460" aria-hidden="true" focusable="false">
+        <defs>
+          <radialGradient id="h-glow" cx=".5" cy=".85" r=".7"><stop offset="0" stop-color="#FF9A4A" stop-opacity=".9"/><stop offset=".5" stop-color="#D9572B" stop-opacity=".35"/><stop offset="1" stop-color="#D9572B" stop-opacity="0"/></radialGradient>
+          <linearGradient id="h-brick" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a2a22"/><stop offset="1" stop-color="#1e1612"/></linearGradient>
+          <clipPath id="h-mouth"><path d="M90 400V210A110 110 0 0 1 310 210V400Z"/></clipPath>
+        </defs>
+        <rect x="30" y="40" width="340" height="400" rx="6" fill="url(#h-brick)"/>
+        <g stroke="#120D0A" stroke-opacity=".55" stroke-width="2" id="h-bricks"></g>
+        <path d="M90 400V210A110 110 0 0 1 310 210V400Z" fill="#0b0705"/>
+        <g clip-path="url(#h-mouth)">
+          <ellipse id="h-glowbed" cx="200" cy="400" rx="200" ry="170" fill="url(#h-glow)"/>
+          <g id="h-flames">
+            <path class="hf" d="M150 392C138 340 166 320 160 270C186 300 200 330 196 392Z" fill="#D9572B"/>
+            <path class="hf" d="M180 392C170 320 210 300 204 230C240 280 250 330 232 392Z" fill="#F08A3A"/>
+            <path class="hf" d="M220 392C214 350 240 330 238 290C262 320 270 360 256 392Z" fill="#D9572B"/>
+            <path class="hf" d="M190 392C186 350 206 336 204 300C222 330 226 360 218 392Z" fill="#FFD27A"/>
+          </g>
+          <g fill="#2a1a12"><rect x="120" y="384" width="160" height="16" rx="8" transform="rotate(-6 200 392)"/><rect x="130" y="384" width="150" height="15" rx="7.5" transform="rotate(7 200 392)"/></g>
+          <g id="h-coals"></g>
+        </g>
+        <path d="M80 404H320" stroke="#B08D57" stroke-width="2"/>
+        <path d="M90 210A110 110 0 0 1 310 210" fill="none" stroke="#B08D57" stroke-opacity=".5" stroke-width="2"/>
+        <text id="h-time" x="200" y="88" text-anchor="middle">06:30</text>
+      </svg>
+      <p class="fire__caption" id="h-caption">06:30 · The wood arrives</p>
+    </div>
+    <div class="fire__flow">
+      <header class="sec-head">
+        <p class="eyebrow">The fire <span class="eyebrow__dot" aria-hidden="true"></span> Chef Isla Varga</p>
+        <h2 id="fire-title" class="ignite">One hearth, lit every morning, cooks everything we serve.</h2>
+        <p class="sec-head__lede ignite">Isla Varga spent fifteen years in city kitchens before taking over a disused foundry and building a hearth where the furnace used to stand. There is no gas line at EMBER. The day is shaped by the fire, and the menu follows what the fire is doing.</p>
+      </header>
+      <ol class="day" id="day"></ol>
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="menu" aria-labelledby="menu-title">
+    <header class="sec-head sec-head--center">
+      <p class="eyebrow">À la carte <span class="eyebrow__dot" aria-hidden="true"></span> or the Fire Menu</p>
+      <h2 id="menu-title" class="ignite">The menu tonight.</h2>
+      <p class="sec-head__lede ignite">Choose from the fire, or let us cook the seven-course tasting for the whole table. Filter by what you eat and open any dish for its components, allergens and a pairing.</p>
+    </header>
+
+    <div class="menu__tasting">
+      <p class="menu__tasting-k">The Fire Menu</p>
+      <p class="menu__tasting-p"><span>Seven courses</span><span class="menu__tasting-price">$95</span><span>per guest</span></p>
+      <p class="menu__tasting-n">Wine pairing $70 · prices illustrative · served to the whole table</p>
+    </div>
+
+    <form class="menu__filters" id="menu-filters" aria-label="Filter the menu">
+      <fieldset class="mf">
+        <legend>Course</legend>
+        <div class="mf__opts" id="mf-cat"></div>
+      </fieldset>
+      <fieldset class="mf">
+        <legend>Dietary</legend>
+        <div class="mf__opts">
+          <label class="tog"><input type="checkbox" name="diet" value="v"><span>Vegetarian</span></label>
+          <label class="tog"><input type="checkbox" name="diet" value="pesc"><span>Pescatarian</span></label>
+          <label class="tog"><input type="checkbox" name="diet" value="gf"><span>Without gluten</span></label>
+          <label class="tog"><input type="checkbox" name="diet" value="nf"><span>Without nuts</span></label>
+        </div>
+      </fieldset>
+      <p class="menu__count" id="menu-count" aria-live="polite">15 dishes</p>
+    </form>
+
+    <div class="menu__list" id="menu-list"></div>
+    <p class="menu__empty" id="menu-empty" hidden>Nothing on tonight’s menu matches every filter. Try removing one, or tell us your needs when you reserve and the kitchen will cook for you.</p>
+    <p class="fine">V vegetarian · GF made without gluten-containing ingredients · <span aria-hidden="true">◆</span> contains nuts. Prices are illustrative. Please tell us about allergies when you reserve; our kitchen handles nuts, gluten and shellfish.</p>
+  </section>
+
+  <!-- Pantry -->
+  <section id="pantry" class="pantry" aria-labelledby="pantry-title">
+    <header class="sec-head sec-head--split">
+      <div>
+        <p class="eyebrow">The pantry <span class="eyebrow__dot" aria-hidden="true"></span> By season</p>
+        <h2 id="pantry-title" class="ignite">What the fire is waiting for.</h2>
+      </div>
+      <div class="pantry__ctrl">
+        <button type="button" class="arrow-btn" id="pantry-prev" aria-label="Previous ingredients"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+        <button type="button" class="arrow-btn" id="pantry-next" aria-label="Next ingredients"><svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="m6 3 5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+      </div>
+    </header>
+    <ol class="pantry__track" id="pantry-track" tabindex="0" aria-label="Seasonal ingredients, scroll horizontally"></ol>
+  </section>
+
+  <!-- The room -->
+  <section id="room" class="room" aria-labelledby="room-title">
+    <div class="room__art" aria-hidden="true">
+      <svg viewBox="0 0 640 520" focusable="false">
+        <defs>
+          <radialGradient id="r-hearth" cx=".5" cy=".55" r=".55"><stop offset="0" stop-color="#FF9A4A" stop-opacity=".85"/><stop offset=".45" stop-color="#D9572B" stop-opacity=".3"/><stop offset="1" stop-color="#120D0A" stop-opacity="0"/></radialGradient>
+          <radialGradient id="r-candle" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#FFD9A0" stop-opacity=".9"/><stop offset="1" stop-color="#FFB060" stop-opacity="0"/></radialGradient>
+          <linearGradient id="r-table" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5a3a26"/><stop offset="1" stop-color="#2a1a12"/></linearGradient>
+        </defs>
+        <rect width="640" height="520" fill="#120D0A"/>
+        <path d="M0 0H640V300H0Z" fill="#1a1310"/>
+        <g stroke="#2a1f1a" stroke-width="1.5"><path d="M0 60H640M0 120H640M0 180H640M0 240H640"/></g>
+        <ellipse cx="320" cy="230" rx="260" ry="200" fill="url(#r-hearth)"/>
+        <path d="M250 300V200A70 70 0 0 1 390 200V300Z" fill="#0b0705" stroke="#B08D57" stroke-opacity=".45" stroke-width="2"/>
+        <path d="M290 300C284 270 300 260 298 236C312 254 318 272 312 300ZM318 300C314 262 336 250 334 214C352 244 356 272 346 300Z" fill="#F08A3A" class="room-flame"/>
+        <path d="M0 300H640V520H0Z" fill="#160F0C"/>
+        <path d="M60 360H580L620 470H20Z" fill="url(#r-table)"/>
+        <path d="M60 360H580" stroke="#B08D57" stroke-opacity=".5" stroke-width="2"/>
+        <g class="candles">
+          <g transform="translate(150 350)"><circle r="46" fill="url(#r-candle)" class="cglow"/><rect x="-5" y="-6" width="10" height="34" fill="#F3E9DC"/><path d="M0 -20C4 -14 4 -10 0 -6C-4 -10 -4 -14 0 -20Z" fill="#FFD27A" class="cflame"/></g>
+          <g transform="translate(320 352)"><circle r="54" fill="url(#r-candle)" class="cglow"/><rect x="-6" y="-10" width="12" height="40" fill="#F3E9DC"/><path d="M0 -26C5 -18 5 -14 0 -9C-5 -14 -5 -18 0 -26Z" fill="#FFD27A" class="cflame"/></g>
+          <g transform="translate(490 350)"><circle r="46" fill="url(#r-candle)" class="cglow"/><rect x="-5" y="-6" width="10" height="34" fill="#F3E9DC"/><path d="M0 -20C4 -14 4 -10 0 -6C-4 -10 -4 -14 0 -20Z" fill="#FFD27A" class="cflame"/></g>
+        </g>
+        <g fill="#E3D4BE" opacity=".85"><ellipse cx="230" cy="400" rx="34" ry="10"/><ellipse cx="410" cy="402" rx="34" ry="10"/><ellipse cx="110" cy="420" rx="30" ry="9"/><ellipse cx="530" cy="420" rx="30" ry="9"/></g>
+        <g stroke="#B08D57" stroke-opacity=".6" stroke-width="1.5" fill="none"><path d="M262 392v-18a8 8 0 0 1 16 0v18M440 394v-18a8 8 0 0 1 16 0v18"/></g>
+      </svg>
+    </div>
+    <div class="room__body">
+      <header class="sec-head">
+        <p class="eyebrow">The room <span class="eyebrow__dot" aria-hidden="true"></span> The Old Foundry</p>
+        <h2 id="room-title" class="ignite">Thirty-two seats around one fire.</h2>
+        <p class="sec-head__lede ignite">The dining room is the old casting floor: brick walls, a long oak table, smaller tables by the windows and the hearth always in view. Candles only after dark.</p>
+      </header>
+      <dl class="facts">
+        <div><dt>Where</dt><dd>The Old Foundry, 14 Kiln Street</dd></div>
+        <div><dt>Dinner</dt><dd>Wednesday to Saturday, 18:00–23:00</dd></div>
+        <div><dt>Sunday</dt><dd>Long lunch, 12:30–17:00</dd></div>
+        <div><dt>Private dining</dt><dd>The kiln room seats up to twelve</dd></div>
+        <div><dt>Access</dt><dd>Step-free entrance and an accessible restroom</dd></div>
+      </dl>
+      <p class="fine fine--light">EMBER is a fictional restaurant; the address and hours are part of the concept.</p>
+    </div>
+  </section>
+
+  <!-- Reserve -->
+  <section id="reserve" class="reserve" aria-labelledby="res-title">
+    <header class="sec-head sec-head--center">
+      <p class="eyebrow">Reservations <span class="eyebrow__dot" aria-hidden="true"></span> Inquiry</p>
+      <h2 id="res-title" class="ignite">Ask for a table by the fire.</h2>
+      <p class="sec-head__lede ignite">Send a request for up to eight guests. For larger parties, choose the kiln room.</p>
+    </header>
+    <form class="res" id="res-form" novalidate>
+      <div class="res__grid">
+        <div class="field">
+          <label for="r-date">Date</label>
+          <input id="r-date" name="date" type="date" required aria-describedby="r-date-hint r-date-err">
+          <p class="field__hint" id="r-date-hint">Open Wednesday to Sunday, up to 90 days ahead.</p>
+          <p class="field__err" id="r-date-err"></p>
+        </div>
+        <div class="field">
+          <span class="field__label" id="r-guests-label">Guests</span>
+          <div class="stepper" role="group" aria-labelledby="r-guests-label">
+            <button type="button" class="stepper__btn" data-d="-1" aria-label="One guest fewer">−</button>
+            <input id="r-guests" name="guests" type="number" inputmode="numeric" min="1" max="12" value="2" aria-labelledby="r-guests-label" aria-describedby="r-guests-err">
+            <button type="button" class="stepper__btn" data-d="1" aria-label="One guest more">+</button>
+          </div>
+          <p class="field__err" id="r-guests-err"></p>
+        </div>
+        <fieldset class="field field--wide" aria-describedby="r-time-err">
+          <legend>Time</legend>
+          <div class="slots" id="r-slots"><p class="slots__empty">Choose a date to see times.</p></div>
+          <p class="field__err" id="r-time-err"></p>
+        </fieldset>
+        <fieldset class="field field--wide">
+          <legend>Menu</legend>
+          <div class="slots">
+            <label class="slot slot--wide"><input type="radio" name="menu" value="fire" checked><span>The Fire Menu</span></label>
+            <label class="slot slot--wide"><input type="radio" name="menu" value="carte"><span>À la carte</span></label>
+            <label class="slot slot--wide"><input type="radio" name="menu" value="kiln"><span>Kiln room (private)</span></label>
+          </div>
+        </fieldset>
+        <div class="field">
+          <label for="r-name">Name</label>
+          <input id="r-name" name="name" type="text" autocomplete="name" required aria-describedby="r-name-err">
+          <p class="field__err" id="r-name-err"></p>
+        </div>
+        <div class="field">
+          <label for="r-email">Email</label>
+          <input id="r-email" name="email" type="email" autocomplete="email" required aria-describedby="r-email-err">
+          <p class="field__err" id="r-email-err"></p>
+        </div>
+        <div class="field field--wide">
+          <label for="r-notes">Allergies, dietary needs or an occasion <span class="field__opt">Optional</span></label>
+          <textarea id="r-notes" name="notes" rows="3" maxlength="400" aria-describedby="r-notes-count"></textarea>
+          <p class="field__hint field__hint--r" id="r-notes-count">0 / 400</p>
+        </div>
+      </div>
+      <div class="res__foot">
+        <button class="btn btn--ember btn--lg" type="submit">Send request</button>
+        <p class="res__note">Portfolio demo: no request is sent and no table is held.</p>
+      </div>
+      <div class="res__done" id="res-done" tabindex="-1" hidden></div>
+    </form>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot__inner">
+    <div class="foot__brand">
+      <svg class="foot__logo" viewBox="0 0 140 40" aria-hidden="true" focusable="false"><use href="#mark"/></svg>
+      <p class="foot__line">Taste the story.</p>
+    </div>
+    <nav class="foot__nav" aria-label="Footer">
+      <ul>
+        <li><a href="#tasting">The tasting</a></li>
+        <li><a href="#fire">The fire</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#pantry">Pantry</a></li>
+        <li><a href="#room">The room</a></li>
+        <li><a href="#reserve">Reserve</a></li>
+      </ul>
+    </nav>
+    <div class="credit">
+      <p class="credit__k">From the kitchen of</p>
+      <p class="credit__by">Designed &amp; built by <a href="https://www.linkedin.com/in/saadbashirmarketing/" target="_blank" rel="noopener" aria-label="Saad Bashir on LinkedIn (opens in a new tab)">Saad Bashir</a></p>
+      <p class="credit__note">Fictional concept brand — portfolio project.</p>
+      <a class="credit__more" href="https://saadbashirportfolio.vercel.app/websites.html">More work <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <p class="foot__fine">EMBER is not a real restaurant. Menu, prices, allergens and hours are illustrative.</p>
+</footer>
+
+<dialog class="dish" id="dish" aria-labelledby="dish-title">
+  <div class="dish__inner" id="dish-inner"></div>
+</dialog>
+</body>
+</html>
